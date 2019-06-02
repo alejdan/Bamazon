@@ -123,7 +123,7 @@ function comprar(){
                 function(err,result,fields){ 
                     // si regresa algo el query
                     if(result.length==1){
-                        console.log("si hay");
+                        console.log("Purchase Confirmed");
                         // update
                         connection.query("UPDATE products SET stock_quantity = stock_quantity - ? WHERE item_id = ?",
                             [answers.Quantity, answers.ID],
